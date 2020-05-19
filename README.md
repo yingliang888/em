@@ -1,2 +1,5 @@
 # em
-The project replicates 
+The project replicates Management Science paper.
+sss 
+xxx
+xxx
