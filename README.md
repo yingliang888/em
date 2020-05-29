@@ -2,7 +2,7 @@
 
 The paper can be found on https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3153047
 
-If you have any questions, feel free to contact Ying Liang at nicole.y.liang@gmail.com 
+If you have any questions, feel free to contact Ying Liang at nicole.y.liang@gmail.com. 
 
 The studies are conducted using R and Matlab. Please make sure Rstudio and Matlab are installed, and the Optimization Toolbox is installed in Matlab. We use R as it provides nice and easy-to-use splinefit package. The estimations are conducted using Matlab.
 
