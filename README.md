@@ -10,4 +10,6 @@ The studies are conducted using R and Matlab. Please make sure Rstudio and Matla
 Steps:
 1. Download the files in the repository to a local folder called "Github".
 
+2. Create a subfolder in "Github" called "boot_samples". The folder "boot_samples" will be used to store bootstrapped samples. Copy and paste the mfile "importcsv.m" to the folder "boot_samples".
 
+3. Now we are ready to play with the data! Run the first section of Rcodes.R.
