@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%  The following codes replicate the main analysis of %%%%%%%%
-%%%%%%%%% Table 3, 9, and 10, and Figure 6  %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%         Tables 3, 9, and 10        %%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%% in BCLL Management Science     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -73,7 +73,9 @@ se2_post = std(tab2_post(:,1:3));
 clearvars -except se_* tab_* se2_* tab2_*
 cd ../
 save mle_se.mat
-
+load tab3.mat
+%Table3 returns the values of Table 3 in BCLL.
+Table3=[tab2(1,:);se2_pre;tab2(2,:),se2_post]
 
 
 %% Table 9 
@@ -124,15 +126,7 @@ se = std(tab);
 tab2 = 1./tab; 
 se2 = std(tab2);
 clearvars -except se tab se2 tab2 obj
-save table10_se.mat
+load table10.mat
+Table10=[theta; se2]
+save table10.mat
 
-% Figure 6. Plot unmanaged earnings:
-impre= gamma1pre./(2.*paraest(1));
-etruepre = e1 - impre;
-impost = gamma1post ./(2.*paraest(2));
-etruepost= e2-impost;
-etruepre2 = trim(etruepre,[5 95]);
-etruepost2 = trim(etruepost,[5,94]);
-histogram(etruepost2, 50, 'normalization','pdf')
-figure
-histogram(etruepre2, 50, 'normalization','pdf')

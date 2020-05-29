@@ -1,6 +1,6 @@
 library(splines)
 library(ggplot2)
-setwd(".\\Github")
+setwd("C:\\Users\\leung\\Dropbox (Personal)\\Github")
 rm(list = ls())
 #################################################################################################
 #Step 1. Use smoothing spline to fit stock price response to earnings 

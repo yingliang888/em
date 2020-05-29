@@ -1,3 +1,8 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%  The following codes replicate  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%        Figures 2, 4, 5, and 6   %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% in BCLL Management Science     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Figure 1 is plotted using the histogram command in Stata.
 % Here we do not provide the codes since it is a realatively well
 % documented fact.
@@ -92,3 +97,15 @@ k(4) = patch([x(:); flipud(x(:))]',[alpha_ci_u; flipud(alpha_ci_b)]',...
 legend(k(1:2),'\gamma','\alpha')
 xlabel('Earnings Surprise')
 ylabel('Earnings Response')
+
+
+%% Figure 6. Plot unmanaged earnings:
+impre= gamma1pre./(2.*paraest(1));
+etruepre = e1 - impre;
+impost = gamma1post ./(2.*paraest(2));
+etruepost= e2-impost;
+etruepre2 = trim(etruepre,[5 95]);
+etruepost2 = trim(etruepost,[5,94]);
+histogram(etruepost2, 50, 'normalization','pdf')
+figure
+histogram(etruepre2, 50, 'normalization','pdf')
